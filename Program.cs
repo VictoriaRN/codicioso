@@ -15,19 +15,15 @@ namespace codicioso
                 float.TryParse(Console.ReadLine(), out cambioQueseDebe);
             } while( cambioQueseDebe <= 0 );
             
-            System.Console.WriteLine($"Número de monedas a devolver: {numeroDeMonedas(cambioQueseDebe)}");
-
+System.Console.WriteLine($"Número de monedas a devolver: {numDeMonedas.numeroDeMonedas(cambioQueseDebe)}");
+System.Console.WriteLine($"Se compone de: ");
+System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m5} moneda(s) de $5");
+System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m1} moneda(s) de $1");
+System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m50C} moneda(s) de ¢50");
+System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m10C} moneda(s) de ¢10");
+System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m1C} moneda(s) de ¢1");
 
         }
 
-        static int numeroDeMonedas(float seDebeCambio)
-        {
-            //float monedaDeCinco = 5.0f;
-            //float monedaDePeso = 1.0f;
-            //float monedaDeCincuetaCentavos = 0.5f;
-            //float mondedaDeDiezCentavos = 0.1f;
-            //float monedaDeUnCentavo = 0.01f;
-            return 0;
-        }
     }
 }
