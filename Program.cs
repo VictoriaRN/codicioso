@@ -15,7 +15,7 @@ namespace codicioso
                 float.TryParse(Console.ReadLine(), out cambioQueseDebe);
             } while( cambioQueseDebe <= 0 );
             
-System.Console.WriteLine($"Número de monedas a devolver: {numDeMonedas.numeroDeMonedas(cambioQueseDebe)}");
+System.Console.WriteLine($"Número de monedas a devolver: {numDeMonedas.numeroDeMonedas(cambioQueseDebe).cambio_en_monedas}");
 System.Console.WriteLine($"Se compone de: ");
 System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m5} moneda(s) de $5");
 System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m1} moneda(s) de $1");
