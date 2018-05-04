@@ -1,29 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace codicioso
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-
-            float cambioQueseDebe;
-
-            do
-            {
-                System.Console.Write("Cuánto cambio se te debe: ");
-                float.TryParse(Console.ReadLine(), out cambioQueseDebe);
-            } while( cambioQueseDebe <= 0 );
-            
-System.Console.WriteLine($"Número de monedas a devolver: {numDeMonedas.numeroDeMonedas(cambioQueseDebe).cambio_en_monedas}");
-System.Console.WriteLine($"Se compone de: ");
-System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m5} moneda(s) de $5");
-System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m1} moneda(s) de $1");
-System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m50C} moneda(s) de ¢50");
-System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m10C} moneda(s) de ¢10");
-System.Console.WriteLine($"{numDeMonedas.numeroDeMonedas(cambioQueseDebe).m1C} moneda(s) de ¢1");
-
+            BuildWebHost(args).Run();
         }
 
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
     }
 }
