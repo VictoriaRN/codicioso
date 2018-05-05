@@ -1,3 +1,10 @@
-# Agua
-# TL;DR
-Implementar un programa que reporte el uso de agua de un usuario, convirtiendo los minutos gastados en la ducha en botellas de agua potable (cada minuto son 12 botellas), después calcular el número de días restantes para el próximo cumpleaños del usuario
+ # Codicioso
+
+ # TL;DR
+Implementar un programa que calcula el número mínimo de monedas necesarias para dar un cambio al usuario.
+
+Cuánto cambio se te debe: .41<br>
+Número de monedas a devolver: 5
+
+ # Especificación
+* Suponga que las únicas monedas disponibles son monedas de cinco pesos ($5), monedas de un peso ($1), monedas de    cincuenta centavos (50 ¢), monedas de diez centavos (10 ¢), y monedas de un centavo (1 ¢).
